@@ -1,0 +1,25 @@
+FROM: Microsoft account team <no-reply@access-accsecurity.com>
+(Claims to be Microsoft)
+
+TO: phishing@pot
+
+SUBJECT: Microsoft account unusual signin activity
+(Sign of urgency)
+
+DATE: Wed, 26 Jul 2023 21:13:36 +0000
+
+REPLY-TO: solutionteamrecognizd02@gmail.com
+(Unrelated domain)
+
+SENDER IP: 89.144.44.2
+(Suspicious origin)
+
+RETURN-PATH: bounce@thcultarfdes.co.uk
+(Unrelated domain)
+
+MESSAGE-ID:
+bf5074ed-888e-4e99-937b-c56d643570a1@VI1EUR05FT062.eop-eur05.prod.protection.outlook.com
+
+EMBEDDED ELEMENTS:
+mailto: solutionteamrecognizd02@gmail.com
+tracking URL: http://thebandalisty.com/track/
