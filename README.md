@@ -126,6 +126,33 @@ Malicious emails often include links or embedded content designed to compromise 
 
 ![Embedded Link](screenshots/link.png)
 
+## IP Analysis
+
+The sender IP `89.144.44.2` does not appear in our threat database, indicating it has not been widely reported or blacklisted. However, an analysis of its registration and hosting information reveals suspicious patterns:
+
+- **ISP:** MSCode.pl  
+- **Usage Type:** Data Center / Web Hosting / Transit  
+- **ASN:** Unknown  
+- **Hostname:** r2.mscode.pl  
+- **Network Range:** 89.144.44.0 - 89.144.44.255  
+- **CIDR:** 89.144.44.0/24  
+- **Network Name:** MSCODE  
+- **Allocation Type:** ASSIGNED PA  
+- **Country / City:** Poland, Warsaw, Mazovia  
+- **Status:** Active  
+- **Registration / Last Changed:** 2026-02-14  
+
+### Investigative Notes
+
+1. The IP belongs to a data center rather than a consumer ISP, which is a common trait for malicious servers used in phishing campaigns.  
+2. The ASN is unregistered or unknown, reducing traceability.  
+3. Despite its recent registration in February 2026, it was immediately active, suggesting it was quickly deployed for operational use.  
+4. This aligns with the timeline of the phishing email, demonstrating the attacker's ability to create new infrastructure and remain under the radar of public blacklists.
+
+![Embedded Link](screenshots/analyze1.png)
+![Embedded Link](screenshots/analyze2.png)
+
+
 
 
 
