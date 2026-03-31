@@ -53,5 +53,4 @@ The following screenshot confirms the SPF and DMARC failures for this email:
 
 ![SPF and DMARC check results](screenshots/spf-check.png)
 
-> **Tip:** Keep screenshots clear, highlight the IP, SPF result, and DMARC action.
 
