@@ -18,4 +18,7 @@ A structured summary of the extracted email fields is available below:
 
 * [View extracted email summary](email-summary.txt)
 
+In addition to the extracted fields, the full email sample is included to allow complete inspection of the message in its original form. This makes it possible to review all headers, content, and embedded elements without relying only on summarized data.
+
+* [Download full email sample](email-sample.eml)
 
