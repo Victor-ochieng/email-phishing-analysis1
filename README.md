@@ -80,5 +80,38 @@ The following screenshot shows the results of our IP investigation:
 ![IP analysis results](screenshots/ip-analysis2.png)
 
 
+# Indicators of Compromise (IOCs)
+
+## Introduction
+
+Indicators of Compromise (IOCs) are traces or artifacts that reveal suspicious activity targeting a system or user. In this investigation, the email sample provided several key IOCs that helped uncover the phishing attempt and assess its potential impact.
+
+---
+
+## Key IOCs
+
+1. **Suspicious Email Addresses**
+   - `no-reply@access-accsecurity.com` – The sender address pretends to be from Microsoft.
+   - `solutionteamrecognizd02@gmail.com` – The reply-to address uses an unrelated domain.
+   - `bounce@thcultarfdes.co.uk` – The return-path is suspicious and does not match legitimate Microsoft servers.
+
+2. **Malicious URL**
+   - `<img alt="" src="http://thebandalisty.com/track/...">`  
+     This hidden tracking pixel confirms active email addresses and can be used to deliver payloads.
+
+3. **Sender IP**
+   - `89.144.44.2` – This IP is flagged in the investigation (details are discussed in the IP Analysis section).
+
+---
+
+## Evidence Screenshot
+
+The screenshot below shows the artifacts collected from the email. It highlights the key indicators that made this campaign suspicious:
+
+![IOC evidence](screenshots/ioc-evidence.png)
+
+
+
+
 
 
