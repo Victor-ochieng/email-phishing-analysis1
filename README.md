@@ -187,7 +187,7 @@ The phishing email uses classic psychological tactics to manipulate the recipien
 
 These elements work together to bypass rational scrutiny, demonstrating the calculated design behind modern phishing campaigns.
 
-## Lesson Learned
+## Lesson Learnt
 
 This phishing case highlights several critical takeaways for both users and investigators:
 
