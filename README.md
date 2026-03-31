@@ -110,6 +110,22 @@ The screenshot below shows the artifacts collected from the email. It highlights
 
 ![IOC evidence](screenshots/ioc-evidence.png)
 
+# URLs and Payloads
+
+## Introduction
+
+Malicious emails often include links or embedded content designed to compromise recipients. In this case, the email contained a hidden URL inside an image tag. While subtle, this URL functions as a tracking pixel and could also be used to deliver malicious content. Understanding how these elements work helps reveal the attacker's strategy and potential risks.
+
+---
+
+## Suspicious URL
+
+- **Hidden Tracking Pixel**  
+  ```html
+  <img alt="" src="http://thebandalisty.com/track/...">
+
+  ![Embedded Link](screenshots/link.png)
+
 
 
 
