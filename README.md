@@ -124,7 +124,7 @@ Malicious emails often include links or embedded content designed to compromise 
   ```html
   <img alt="" src="http://thebandalisty.com/track/...">
 
-  ![Embedded Link](screenshots/link.png)
+![Embedded Link](screenshots/link.png)
 
 
 
