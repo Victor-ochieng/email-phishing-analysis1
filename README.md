@@ -22,3 +22,36 @@ In addition to the extracted fields, the full email sample is included to allow 
 
 * [Download full email sample](email-sample.eml)
 
+
+# SPF, DKIM & DMARC Analysis
+
+## Introduction
+
+When analyzing emails for authenticity, the first step is to verify if the sending domain has proper **SPF, DKIM, and DMARC** records. These are authentication mechanisms designed to prevent spoofing and phishing.
+
+- **SPF (Sender Policy Framework):** Checks if the sending server is allowed to send emails on behalf of the domain.
+- **DKIM (DomainKeys Identified Mail):** Uses cryptographic signatures to verify the content wasn’t altered in transit.
+- **DMARC (Domain-based Message Authentication, Reporting & Conformance):** Combines SPF and DKIM results and instructs receiving servers how to handle emails failing checks.
+
+---
+
+## How it Applied to Our Email Sample
+
+In our case:
+
+- **SPF:** Not set or failed (`thcultarfdes.co.uk` did not authorize IP `89.144.44.2`).
+- **DKIM:** Not signed.
+- **DMARC:** Permerror (domain `access-accsecurity.com` has a misconfigured or missing DMARC policy).
+
+This is a strong indication the email is **malicious** or part of a **phishing campaign**, despite claiming to be from Microsoft.
+
+---
+
+## Evidence Screenshot
+
+The following screenshot confirms the SPF and DMARC failures for this email:
+
+![SPF and DMARC check results](screenshots/spf-check.png)
+
+> **Tip:** Keep screenshots clear, highlight the IP, SPF result, and DMARC action.
+
