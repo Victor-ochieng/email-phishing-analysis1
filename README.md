@@ -152,6 +152,64 @@ The sender IP `89.144.44.2` does not appear in our threat database, indicating i
 ![Embedded Link](screenshots/analyze1.png)
 ![Embedded Link](screenshots/analyze2.png)
 
+## Timeline Reconstruction
+
+Reconstructing the timeline helps us understand how the phishing campaign unfolded and links technical indicators to real-world events.
+
+- **Email Sent:** Wed, 26 Jul 2023 21:13:36 +0000  
+  The phishing email was delivered to the target inbox, claiming to be from the Microsoft account team. The subject line, “Microsoft account unusual signin activity,” is crafted to create urgency and trick the recipient into interacting.
+
+- **Sender IP Activation:** 14 Feb 2026  
+  The IP `89.144.44.2` (r2.mscode.pl) was registered and activated in Poland. Even though the registration date is after the email timestamp, the early activity suggests this IP is part of a newly created infrastructure that attackers deploy for campaigns. Its data center hosting and unknown ASN indicate it was likely set up to evade detection and remain untraceable.
+
+- **Domain and Hosting Context:**  
+  The sender domains and associated infrastructure are newly registered and have little to no historical footprint:
+  - `mscode.pl` – network hosting the sender IP.
+  - Unknown ASN and unlisted in major abuse databases.
+  This reinforces the pattern of using fresh, low-profile infrastructure to avoid reputation-based blocks.
+
+- **Malicious Artifacts Detected:**  
+  - Suspicious email addresses: `no-reply@access-accsecurity.com`, `solutionteamrecognizd02@gmail.com`, `bounce@thcultarfdes.co.uk`
+  - Embedded tracking pixel: `<img alt="" src="http://thebandalisty.com/track/...">`
+
+### Investigative Notes
+
+By correlating the email timestamp with the registration data of the sender IP and domain, it becomes clear that the attacker prepared new infrastructure specifically for this campaign. This is consistent with modern phishing tactics, where actors deploy short-lived servers and domains to reduce the chance of being caught in automated blacklists.
+
+## Social Engineering Techniques
+
+The phishing email uses classic psychological tactics to manipulate the recipient:
+
+- **Urgency and Fear:** The subject, “Microsoft account unusual signin activity,” pressures the user to act quickly without thinking.  
+- **Authority Impersonation:** The sender claims to be the Microsoft account team, creating trust and legitimacy.  
+- **Unrelated Reply-to Address:** By directing replies to `solutionteamrecognizd02@gmail.com`, the attacker controls communication while appearing official.  
+- **Hidden Tracking Pixel:** The embedded image confirms the email was opened and collects environment information, reinforcing control over the target.  
+
+These elements work together to bypass rational scrutiny, demonstrating the calculated design behind modern phishing campaigns.
+
+## Lesson Learned
+
+This phishing case highlights several critical takeaways for both users and investigators:
+
+1. **Scrutinize Urgent Emails:** Messages that demand immediate action often aim to bypass careful thinking.  
+2. **Verify Sender Authenticity:** Check email addresses, reply-to fields, and domain names instead of trusting the display name.  
+3. **Monitor Embedded Content:** Hidden images or links can silently track activity or deliver payloads.  
+4. **Trace IPs and Domains:** Newly registered IPs or domains may indicate emerging threats; absence in threat databases does not imply safety.  
+5. **Document and Share Findings:** Collecting evidence—screenshots, headers, URLs, and IOCs—ensures reproducibility and strengthens threat intelligence.  
+
+By approaching suspicious emails with a structured investigative mindset, similar campaigns can be detected and mitigated before causing harm.
+
+## Tools Used
+
+Throughout this investigation, a combination of email analysis, threat intelligence, and forensic tools were employed to reconstruct the phishing campaign:
+
+1. **Email Header Analysis** – Tools like MxToolbox and manual inspection to verify sender authenticity, SPF/DKIM/DMARC records, and trace the email path.  
+2. **IP and Domain Lookup** – Services such as RDAP, Whois, and GeoIP were used to investigate the origin and registration of suspicious IPs and domains.  
+3. **IOC Collection** – Manual extraction of suspicious URLs, attachments, and email addresses to build a comprehensive set of Indicators of Compromise.  
+4. **Screenshots and Evidence Capture** – Screenshots of headers, reports, and analysis results were recorded for documentation and verification purposes.  
+5. **Payload and URL Analysis** – Basic static inspection of links and embedded content to understand potential risks without executing any malicious code.  
+
+
 
 
 
