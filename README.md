@@ -53,4 +53,32 @@ The following screenshot confirms the SPF and DMARC failures for this email:
 
 ![SPF and DMARC check results](screenshots/spf-check.png)
 
+# IP Analysis
+
+## Introduction
+
+After verifying email authentication, the next step is to analyze the **sending IP**. An IP check can reveal whether the sender is associated with spam, malware, or phishing campaigns. This helps us determine if the email is part of a larger threat.
+
+For this email, the **sender IP was `89.144.44.2`**, which does not match the legitimate Microsoft sending servers.
+
+---
+
+## Analysis
+
+- The IP is located in an unrelated region compared to the claimed Microsoft source.
+- VirusTotal or other threat intelligence services may flag the IP as **malicious** or previously used in phishing attacks.
+- Reverse DNS or PTR lookup can show inconsistencies with the domain it claims to represent.
+- Cross-referencing with email headers confirms the server path is suspicious and unusual for genuine Microsoft notifications.
+
+---
+
+## Evidence Screenshot
+
+The following screenshot shows the results of our IP investigation:
+
+![IP analysis results](screenshots/ip-analysis1.png)
+![IP analysis results](screenshots/ip-analysis2.png)
+
+
+
 
